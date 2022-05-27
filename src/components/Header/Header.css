@@ -1,0 +1,50 @@
+.header {
+  max-width: 1280px;
+  width: 100%;
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202020;
+  box-sizing: border-box;
+  padding: 0 70px 0 70px;
+}
+
+.header__logo {
+  max-width: 38px;
+  width: 100%;
+  background: url(../../images/logo_.svg);
+  background-repeat: no-repeat;
+  padding: 19px 0 19px 0;
+}
+
+.header__auth-buttons {
+  max-width: 182px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__button {
+  max-width: 76px;
+  width: 100%;
+  border-style: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 12px;
+  font-style: normal;
+  padding: 0;
+}
+
+.register-button {
+  color: #FFFFFF;
+  line-height: 16px;
+}
+
+.login-button {
+  background: #3DDC84;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 32px;
+}
