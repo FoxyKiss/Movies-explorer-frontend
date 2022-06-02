@@ -2,11 +2,12 @@ import AuthForm from '../AuthForm/AuthForm.jsx';
 
 
 const formProps = {
+  path: '/sign-up',
   formId: 'signUpForm',
   buttonText: 'Зарегистрироваться',
   title: 'Добро пожаловать!',
-  sentence: 'Ещё не зарегистрированы?',
-  linkText: 'Регистрация',
+  sentence: 'Уже зарегистрированы?',
+  linkText: 'Войти',
   indentClass: 'register-indent'
 }
 export default function Login() {
