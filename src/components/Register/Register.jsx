@@ -2,7 +2,7 @@ import AuthForm from '../AuthForm/AuthForm.jsx';
 
 
 const formProps = {
-  path: '/sign-up',
+  path: '/sign-in',
   formId: 'signUpForm',
   buttonText: 'Зарегистрироваться',
   title: 'Добро пожаловать!',
@@ -10,7 +10,7 @@ const formProps = {
   linkText: 'Войти',
   indentClass: 'register-indent'
 }
-export default function Login() {
+export default function Register() {
   return (
     <AuthForm formProps={formProps} />
   );

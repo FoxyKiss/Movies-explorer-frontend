@@ -24,7 +24,7 @@ export default function AuthForm({ formProps }) {
             minLength="2" maxLength="200" autoComplete="off" />
         </label>
         <button className={`auth-form__submit ${formProps.indentClass}`} type="submit">{formProps.buttonText}</button>
-        <p className="auth-form__sentence" href="#">{formProps.sentence} <a href="#" className="auth-form__link">{formProps.linkText}</a></p>
+        <p className="auth-form__sentence">{formProps.sentence} <a href={formProps.path} className="auth-form__link">{formProps.linkText}</a></p>
       </form >
     </div >
   );
