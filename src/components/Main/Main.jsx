@@ -8,10 +8,11 @@ import Techs from '../Techs/Techs.jsx';
 import AboutMe from '../AboutMe/AboutMe.jsx'
 import Footer from '../Footer/Footer.jsx'
 
-export default function Main() {
+export default function Main({ isLogin }) {
+
   return (
     <div className="page">
-      <Header />
+      <Header isLogin={isLogin} />
       <Promo />
       <AboutProject />
       <Techs />
