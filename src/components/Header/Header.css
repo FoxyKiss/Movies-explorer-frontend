@@ -10,20 +10,6 @@
   padding: 0 70px 0 70px;
 }
 
-.header__navigation {
-  max-width: 215px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header__navigation-link {
-  text-decoration: none;
-  color: #FFFFFF;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
-}
 
 .header__logo {
   max-width: 38px;
