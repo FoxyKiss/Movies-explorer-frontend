@@ -11,13 +11,13 @@ import Footer from '../Footer/Footer.jsx'
 export default function Main({ isLogin }) {
 
   return (
-    <div className="page">
+    <>
       <Header isLogin={isLogin} />
       <Promo />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Footer />
-    </div>
+    </>
   );
 };
