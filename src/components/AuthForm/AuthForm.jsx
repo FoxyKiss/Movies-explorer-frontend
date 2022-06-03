@@ -5,7 +5,7 @@ export default function AuthForm({ formProps }) {
   return (
     <div className="auth-container">
       <div className="auth-container__header">
-        <div className="auth-container__logo"></div>
+        <Link to='/'><div className="auth-container__logo"></div></Link>
         <h2 className="auth-container__title">{formProps.title}</h2>
       </div>
       <form id={formProps.formId} className="auth-form">

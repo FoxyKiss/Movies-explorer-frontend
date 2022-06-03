@@ -7,7 +7,7 @@ import Navigation from '../Navigation/Navigation.jsx';
 export default function Header({ isLogin }) {
   return (
     <header className="header">
-      <div className="header__logo"></div>
+      <Link to='/' className="header__logo"></Link>
       <Navigation isLogin={isLogin} />
       <div className="header__auth-buttons">
         <button type="button" className={`header__button register-button  ${isLogin ? 'hide-block' : ''}`}>
