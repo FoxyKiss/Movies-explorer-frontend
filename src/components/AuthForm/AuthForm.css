@@ -118,3 +118,7 @@
 .register-indent {
   margin-top: 60px;
 }
+
+.hide-label {
+  display: none;
+}
