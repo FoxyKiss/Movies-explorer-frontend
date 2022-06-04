@@ -82,6 +82,8 @@ export default function MoviesCardList() {
             <MoviesCard key={movie.movieId} movie={movie} like={like} />
           )
         })}
+
+        <button type="button" className="movies-card-list__button">Ещё</button>
       </ul>
     </section>
   )
