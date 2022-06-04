@@ -1,6 +1,7 @@
 import './MoviesCardList.css';
 import image from '../../images/film.png';
 
+import MoviesCard from '../MoviesCard/MoviesCard.jsx'
 
 export default function MoviesCardList() {
   const moviesList =
@@ -78,7 +79,7 @@ export default function MoviesCardList() {
       <ul className="movies-card-list__list">
         {moviesList.map((movie) => {
           return (
-
+            <MoviesCard key={movie.movieId} movie={movie} like={like} />
           )
         })}
       </ul>
