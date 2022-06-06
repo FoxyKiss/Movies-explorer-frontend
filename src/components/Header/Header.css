@@ -10,6 +10,22 @@
   padding: 0 70px 0 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 768px;
+    background: #073042;
+    padding: 18px 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    max-width: 320px;
+    background: #073042;
+    padding: 18px 14px;
+  }
+}
+
 
 .header__logo {
   max-width: 38px;
@@ -26,6 +42,12 @@
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 400px) {
+  .header__auth-buttons {
+    max-width: 132px;
+  }
+}
+
 .header__link {
   max-width: 76px;
   width: 100%;
@@ -36,10 +58,25 @@
   padding: 0;
 }
 
+@media screen and (max-width: 400px) {
+  .header__link {
+    max-width: 64px;
+    font-size: 10px;
+    line-height: 26px;
+  }
+}
+
 .register-link {
   color: #FFFFFF;
   margin-right: 30px;
 }
+
+@media screen and (max-width: 400px) {
+  .register-link {
+    margin-right: 14px;
+  }
+}
+
 
 .login-link {
   color: #000000;
@@ -59,4 +96,12 @@
 
 .hide-block {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 768px;
+    background: #073042;
+    padding: 18px 30px;
+  }
 }

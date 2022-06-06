@@ -5,6 +5,7 @@ export default function AboutMe() {
     <section className='about-me'>
       <h2 className='about-me__title'>Студент</h2>
       <div className='about-me__info'>
+        <div className='about-me__info-image' />
         <div className='about-me__description'>
           <h3 className='about-me__descriprion-title'>Арсений</h3>
           <p className='about-me__description-subtitle'>Фронтенд-разработчик, 24 года</p>
@@ -18,7 +19,6 @@ export default function AboutMe() {
             <li><a className='about-me__link' href='https://github.com/FoxyKiss'>Github</a></li>
           </ul>
         </div>
-        <div className='about-me__info-image' />
       </div>
     </section>
   );

@@ -11,12 +11,42 @@
   padding: 75px 70px 75px 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .promo {
+    max-width: 768px;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px 44px 75px 44px
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo {
+    max-width: 400px;
+    padding: 70px 10px 30px 10px
+  }
+}
+
 .promo__description {
   max-width: 640px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 768px) {
+  .promo__description {
+    max-width: 680px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__description {
+    max-width: 300px;
+  }
+}
+
 
 .promo__description-title {
   max-width: 640px;
@@ -27,6 +57,27 @@
   margin: 0 0 35px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .promo__description-title {
+    max-width: 680px;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__description-title {
+    max-width: 310px;
+    font-size: 30px;
+    line-height: 38px;
+    margin-top: 44px;
+    margin-bottom: 24px;
+  }
+}
+
 .promo__description-subtitle {
   max-width: 310px;
   width: 100%;
@@ -35,6 +86,20 @@
   line-height: 16px;
   opacity: 0.5;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .promo__description-subtitle {
+    max-width: 260px;
+    text-align: center;
+    margin-bottom: 145px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__description-subtitle {
+    margin-bottom: 80px;
+  }
 }
 
 .promo__description-button {
@@ -55,10 +120,32 @@
   padding: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .promo__description-button {
+    position: static;
+  }
+}
+
 .promo__image {
   max-width: 310px;
-  width: 310px;
+  width: 100%;
+  order: 1;
   background: url(../../images/promo-image.png);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .promo__image {
+    order: 0;
+    background-size: cover;
+    padding: 150px 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .promo__image {
+    max-width: 210px;
+    padding: 100px 0;
+  }
 }

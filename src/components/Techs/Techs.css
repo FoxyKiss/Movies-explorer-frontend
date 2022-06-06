@@ -9,16 +9,45 @@
   padding: 100px 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .techs {
+    max-width: 768px;
+    padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs {
+    max-width: 320px;
+    padding: 70px 14px;
+  }
+}
+
 .techs__title {
   max-width: 1140px;
   width: 100%;
-  border-bottom: 1px solid #DADADA;;
+  border-bottom: 1px solid #DADADA;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
   letter-spacing: -0.04em;
   padding-bottom: 23px;
   margin: 0 0 90px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__title {
+    max-width: 668px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__title {
+    max-width: 284px;
+    padding-bottom: 28px;
+    margin-bottom: 60px;
+  }
 }
 
 .techs__description-title {
@@ -32,6 +61,21 @@
   margin: 0 0 26px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .techs__description-title {
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__description-title {
+    max-width: 292px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+}
+
 .techs__description-subtitle {
   max-width: 460px;
   width: 100%;
@@ -43,14 +87,43 @@
   margin: 0 0 100px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .techs__description-subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__description-subtitle {
+    max-width: 292px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
 .techs__list {
   max-width: 700px;
   width: 100%;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__list {
+    max-width: 648px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__list {
+    max-width: 178px;
+  }
 }
 
 .techs__list-item {
@@ -63,4 +136,17 @@
   letter-spacing: -0.04em;
   background: #303030;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__list-item {
+    max-width: 84px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .techs__list-item {
+    font-size: 12px;
+    line-height: 57px;
+  }
 }
