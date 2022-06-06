@@ -3,10 +3,10 @@ import './Profile.css';
 //? Импорты компонентов
 import Header from '../Header/Header.jsx'
 
-export default function Profile() {
+export default function Profile({ isLogin, popupHandler }) {
   return (
     <>
-      <Header />
+      <Header popupHandler={popupHandler} isLogin={isLogin} />
       <section className="profile">
         <h2 className="profile__title">Привет, Виталий!</h2>
         <div className="profile__info">

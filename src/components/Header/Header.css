@@ -18,7 +18,7 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .header {
     max-width: 320px;
     background: #073042;
@@ -26,6 +26,9 @@
   }
 }
 
+.header_theme_dark {
+  background-color: #202020;
+}
 
 .header__logo {
   max-width: 38px;
@@ -55,6 +58,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 32px;
+  text-align: center;
   padding: 0;
 }
 
@@ -63,6 +67,23 @@
     max-width: 64px;
     font-size: 10px;
     line-height: 26px;
+  }
+}
+
+.header__nav-button {
+  cursor: pointer;
+  display: none;
+  max-width: 44px;
+  width: 100%;
+  background: url(../../images/burger-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 22px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__nav-button {
+    display: block;
   }
 }
 
@@ -94,14 +115,12 @@
   font-size: 14px;
 }
 
-.hide-block {
-  display: none;
+@media screen and (max-width: 768px) {
+  .profile-link {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    max-width: 768px;
-    background: #073042;
-    padding: 18px 30px;
-  }
+.hide-block {
+  display: none;
 }

@@ -5,9 +5,11 @@ import './Header.css'
 //? Импорты компонентов
 import Navigation from '../Navigation/Navigation.jsx';
 
-export default function Header({ isLogin }) {
+export default function Header({ isLogin, popupHandler }) {
+  const darkThemePath = window.location.pathname === '/saved-movies' || window.location.pathname === '/movies' || window.location.pathname === '/profile'
+
   return (
-    <header className="header">
+    <header className={`header ${darkThemePath ? 'header_theme_dark' : ''}`}>
       <Link to='/' className="header__logo"></Link>
       <Navigation isLogin={isLogin} />
       <div className="header__auth-buttons">
@@ -20,6 +22,7 @@ export default function Header({ isLogin }) {
         <Link to='profile' className={`header__link profile-link ${isLogin ? '' : 'hide-block'}`}>
           Аккаунт
         </Link>
+        <button type='button' onClick={popupHandler} className={`header__nav-button ${isLogin ? '' : 'hide-block'}`}></button>
       </div>
     </header >
   );
