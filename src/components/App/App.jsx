@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom';
+import './App.css'
 
 //? Импорты компонентов
 import Main from '../Main/Main.jsx';

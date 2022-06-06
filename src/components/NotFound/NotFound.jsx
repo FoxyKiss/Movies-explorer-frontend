@@ -1,5 +1,5 @@
-import './NotFound.css';
 import { useHistory } from 'react-router-dom'
+import './NotFound.css';
 
 export default function NotFound() {
   let history = useHistory()

@@ -1,5 +1,5 @@
-import './AuthForm.css';
 import { Link } from 'react-router-dom'
+import './AuthForm.css';
 
 export default function AuthForm({ formProps }) {
   return (

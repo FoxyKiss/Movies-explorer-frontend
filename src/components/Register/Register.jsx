@@ -1,3 +1,5 @@
+
+//? Импорты компонентов
 import AuthForm from '../AuthForm/AuthForm.jsx';
 
 export default function Register() {

@@ -1,5 +1,6 @@
 import './Profile.css';
 
+//? Импорты компонентов
 import Header from '../Header/Header.jsx'
 
 export default function Profile() {

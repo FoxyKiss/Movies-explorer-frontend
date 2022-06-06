@@ -1,4 +1,6 @@
 import './MoviesCardList.css';
+
+//? Импорты компонентов
 import MoviesCard from '../MoviesCard/MoviesCard.jsx'
 
 export default function MoviesCardList({ moviesList }) {
