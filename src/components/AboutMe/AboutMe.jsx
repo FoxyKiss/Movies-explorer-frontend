@@ -20,27 +20,6 @@ export default function AboutMe() {
         </div>
         <div className='about-me__info-image' />
       </div>
-      <p className='about-me__subtitle'>Портфолио</p>
-      <ul className='about-me__portfolio'>
-        <li className='about-me__portfolio-item'>
-          <a className='about-me__portfolio-link' href='https://foxykiss.github.io/How-to-learn/'>
-            Статичный сайт
-            <button type='button' className='about-me__portfolio-button'></button>
-          </a>
-        </li>
-        <li className='about-me__portfolio-item'>
-          <a className='about-me__portfolio-link' href='https://foxykiss.github.io/Russian-travel/'>
-            Адаптивный сайт
-            <button type='button' className='about-me__portfolio-button'></button>
-          </a>
-        </li>
-        <li className='about-me__portfolio-item'>
-          <a className='about-me__portfolio-link' href='https://foxykiss.github.io/Mesto-main/'>
-            Одностраничное приложение
-            <button type='button' className='about-me__portfolio-button'></button>
-          </a>
-        </li>
-      </ul>
     </section>
   );
 }
