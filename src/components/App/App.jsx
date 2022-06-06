@@ -8,6 +8,7 @@ import Login from '../Login/Login.jsx'
 import Movies from '../Movies/Movies.jsx'
 import SavedMovies from '../SavedMovies/SavedMovies.jsx'
 import Profile from '../Profile/Profile.jsx';
+import NotFound from '../NotFound/NotFound.jsx'
 
 function App() {
   //? State переменная статуса авторизации
@@ -22,6 +23,7 @@ function App() {
         <Route path="/movies"><Movies /></Route>
         <Route path="/saved-movies"><SavedMovies /></Route>
         <Route path="/profile"><Profile /></Route>
+        <Route path="/not-found"><NotFound /></Route>
       </Switch >
     </div>
   )
