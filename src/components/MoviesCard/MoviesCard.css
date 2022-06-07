@@ -1,10 +1,21 @@
 .movies-card-list__item {
-  max-width: 364px;
+  max-width: 354px;
   width: 100%;
   background: #222222;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
-  margin-bottom: 37px;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-card-list__item {
+    max-width: 328px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .movies-card-list__item {
+    max-width: 300px;
+  }
 }
 
 .movies-image {
@@ -17,6 +28,12 @@
   width: 100%;
   box-sizing: border-box;
   padding: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .movies-info {
+    padding: 14px;
+  }
 }
 
 .movies-info__title {

@@ -14,7 +14,7 @@ import MenuPopup from '../MenuPopup/MenuPopup.jsx'
 
 function App() {
   //? State переменная статуса авторизации
-  const [loggedIn, setLoggedIn] = React.useState(true)
+  const [loggedIn, setLoggedIn] = React.useState(false)
 
   //? State переменная модального окна
   const [menuPopupOpen, setMenuPopupOpen] = React.useState(false)

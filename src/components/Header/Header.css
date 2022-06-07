@@ -62,7 +62,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .header__link {
     max-width: 64px;
     font-size: 10px;
