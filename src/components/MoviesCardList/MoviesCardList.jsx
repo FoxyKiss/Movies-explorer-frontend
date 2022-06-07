@@ -4,6 +4,8 @@ import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard.jsx'
 
 export default function MoviesCardList({ moviesList }) {
+  const hideBlockPath = window.location.pathname === '/saved-movies'
+
   function like(evt) {
     evt.target.classList.toggle('movies-info__like-button_active')
   }
@@ -17,7 +19,7 @@ export default function MoviesCardList({ moviesList }) {
           )
         })}
 
-        <button type="button" className="movies-card-list__button">Ещё</button>
+        <button type="button" className={`movies-card-list__button ${hideBlockPath ? 'hide-block' : ''}`}>Ещё</button>
       </ul>
     </section>
   )

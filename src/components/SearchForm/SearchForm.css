@@ -52,6 +52,7 @@
   max-width: 932px;
   width: 100%;
   position: relative;
+  margin-right: 40px;
 }
 
 @media screen and (max-width: 768px) {
@@ -110,7 +111,7 @@
   width: 100%;
   min-height: 34px;
   background: #4285F4;
-  background-image: url(../../images/search-icon.png);
+  background-image: url(../../images/search-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 48px;

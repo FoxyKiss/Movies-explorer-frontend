@@ -15,8 +15,8 @@ export default function AboutMe() {
             которым я грезил со своих 16 лет!
           </p>
           <ul className='about-me__links'>
-            <li><a className='about-me__link' href='https://www.linkedin.com/in/foxkiss98/'>Linkedin</a></li>
-            <li><a className='about-me__link' href='https://github.com/FoxyKiss'>Github</a></li>
+            <li><a target='_blank' className='about-me__link' href='https://www.linkedin.com/in/foxkiss98/' rel="noreferrer">Linkedin</a></li>
+            <li><a target='_blank' className='about-me__link' href='https://github.com/FoxyKiss' rel="noreferrer">Github</a></li>
           </ul>
         </div>
       </div>

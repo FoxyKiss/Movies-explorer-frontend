@@ -5,7 +5,7 @@ export default function SearchForm() {
     <section className="search">
       <form className="search__form">
         <div className="search__form-field">
-          <input className="search__form-input" type="text" placeholder="Фильм" />
+          <input required={true} minLength="2" className="search__form-input" type="text" placeholder="Фильм" />
           <button className="search__form-button" type="submit"></button>
         </div>
         <label className="search-form__checkbox">
