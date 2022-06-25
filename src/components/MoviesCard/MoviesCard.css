@@ -65,8 +65,14 @@
   padding: 15px 0;
 }
 
-.movies-info__like-button_active {
+.movies-button_type_active {
   background: url(../../images/like-button-active.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.movies-button_type_disabled {
+  background: url(../../images/like-button.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

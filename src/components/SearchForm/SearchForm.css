@@ -102,6 +102,34 @@
   }
 }
 
+.search__form-input-error {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  color: hsla(344, 85%, 57%, 1);
+  align-self: center;
+  visibility: hidden;
+  transition: visibility .8s ease;
+}
+
+.search__form-input-error-active {
+  visibility: visible;
+}
+
+.search__form-error {
+  text-align: center;
+  line-height: 18px;
+  font-size: 16px;
+  max-width: 400px;
+  width: 31.25vw;
+  min-width: 200px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 
 .search__form-button {
   position: absolute;

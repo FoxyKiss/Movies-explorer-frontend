@@ -1,21 +1,21 @@
-import './Movies.css';
-import { moviesList } from '../../utils/moviesList.js'
-//? Импорты компонентов
-import Header from '../Header/Header.jsx';
-import Footer from '../Footer/Footer.jsx'
-import SearchForm from '../SearchForm/SearchForm.jsx'
-import Preloader from '../Preloader/Preloader.jsx'
-import MoviesCardList from '../MoviesCardList/MoviesCardList.jsx'
+import React from 'react'
+import './Movies.css'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
+import SearchForm from '../SearchForm/SearchForm'
 
-export default function Movies({ isLogin, popupHandler }) {
-
+export default function Movies({ cardCount, isAuth, handleSaveFilm, handleDeleteFilm, savedMovies }) {
   return (
     <>
-      <Header popupHandler={popupHandler} isLogin={isLogin} />
-      <SearchForm />
-      <MoviesCardList moviesList={moviesList} />
-      <Preloader />
+      <Header isAuth={isAuth} />
+      <SearchForm
+        isSaved={false}
+        cardCount={cardCount}
+        handleSaveFilm={handleSaveFilm}
+        handleDeleteFilm={handleDeleteFilm}
+        savedMovies={savedMovies}
+      />
       <Footer />
     </>
-  );
+  )
 }

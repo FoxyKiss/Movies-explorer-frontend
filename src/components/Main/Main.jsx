@@ -9,11 +9,11 @@ import AboutMe from '../AboutMe/AboutMe.jsx'
 import Portfolio from '../Portfolio/Portfolio.jsx'
 import Footer from '../Footer/Footer.jsx'
 
-export default function Main({ isLogin, isOpen, closePop, popupHandler }) {
+export default function Main({ isAuth }) {
 
   return (
     <>
-      <Header isOpen={isOpen} closePop={closePop} isLogin={isLogin} popupHandler={popupHandler} />
+      <Header isAuth={isAuth} />
       <Promo />
       <AboutProject />
       <Techs />
