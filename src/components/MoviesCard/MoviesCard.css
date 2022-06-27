@@ -18,6 +18,13 @@
   }
 }
 
+.movies-card-list__image-container {
+  max-width: 354px;
+  width: 100%;
+  max-height: 192px;
+  overflow: hidden;
+}
+
 .movies-image {
   width: 100%;
   object-fit: contain;

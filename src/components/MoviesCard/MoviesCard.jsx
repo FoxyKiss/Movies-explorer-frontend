@@ -59,12 +59,14 @@ export default function MoviesCard({ movie, filmDuration, isSaved, handleDeleteF
   }
   return (
     <div className="movies-card-list__item">
-      <img
-        className="movies-image"
-        alt="картинка фильма"
-        src={aproovedMovie.image}
-        onClick={handleOpenTrailer}
-      />
+      <div className="movies-card-list__image-container">
+        <img
+          className="movies-image"
+          alt="картинка фильма"
+          src={aproovedMovie.image}
+          onClick={handleOpenTrailer}
+        />
+      </div>
       <div className="movies-info">
         <h3 className="movies-info__title">{aproovedMovie.nameRU}</h3>
         <p className="movies-info__duration">{filmDuration}</p>
