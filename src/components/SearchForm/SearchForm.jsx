@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useLocation } from 'react-router-dom';
 import formValidationHook from '../../utils/hooks/formValidationHook'
 import './SearchForm.css'
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import getMovies from '../../utils/MoviesApi'
 import Preloader from '../Preloader/Preloader'
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 
 export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleDeleteFilm, savedMovies }) {
-  const { values, isValid, handleChange } = formValidationHook({
+  const location = useLocation()
+  const currentUser = useContext(CurrentUserContext)
+  const { values, isValid, setIsValid, handleChange } = formValidationHook({
     search: '',
   })
   const [isError, setIsError] = React.useState(false)
@@ -53,9 +57,12 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
       setMoviesStorage(savedMovies)
     }
   }, [savedMovies])
+
   const filterItems = (arr, query) =>
     arr.filter((movie) => movie.nameRU.toLowerCase().indexOf(query.toLowerCase()) !== -1)
   const onSubmitForm = (evt) => {
+    localStorage.setItem(`${currentUser.email} - movieSearch`, values.search);
+    localStorage.setItem(`${currentUser.email} - shortMovies`, isShort);
     evt.preventDefault()
     if (isValid) {
       setIsPreviousSearch(false)
@@ -185,6 +192,20 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
     }
   }, [isShort])
 
+  React.useEffect(() => {
+    if (location.pathname === '/movies' && localStorage.getItem(`${currentUser.email} - movieSearch`)) {
+      const searchValue = localStorage.getItem(`${currentUser.email} - movieSearch`);
+      values.search = searchValue;
+    }
+  }, [currentUser]);
+
+  React.useEffect(() => {
+    if (localStorage.getItem(`${currentUser.email} - shortMovies`) === 'true') {
+      setIsShort(true);
+    } else {
+      setIsShort(false);
+    }
+  }, [currentUser]);
   return (
     <>
       <section className="search">
@@ -197,7 +218,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
               required
               className="search__form-input"
               onChange={handleChange}
-              value={values.search}
+              value={values.search || ''}
               disabled={isInputDisabled}
             />
             <button aria-label="найти фильмы" type="submit" className="search__form-button" />
@@ -213,13 +234,20 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
           </span>
           <label htmlFor="short-films" className="search-form__checkbox">
             <span className="search-form__checkbox-title">Короткометражки</span>
-            <input
+            {isShort && location.pathname === '/movies' ? (<input
+              id="short-films"
+              checked
+              type="checkbox"
+              className="search-form__checkbox_input_hidden"
+              name="short-films"
+              onChange={onShortFilmsCheckbox}
+            />) : (<input
               id="short-films"
               type="checkbox"
               className="search-form__checkbox_input_hidden"
               name="short-films"
               onChange={onShortFilmsCheckbox}
-            />
+            />)}
             <span className="search-form__checkbox_input_visible" />
           </label>
         </form>
@@ -239,6 +267,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
           savedMovies={savedMovies}
         />
       )}
+
       {isPreloaderVisible && <Preloader />}
       {isNothingFound && <p className="search__form-error">Ничего не найдено</p>}
       {isNetworkError && (
@@ -247,6 +276,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
           попробуйте ещё раз.
         </p>
       )}
+
     </>
   )
 }

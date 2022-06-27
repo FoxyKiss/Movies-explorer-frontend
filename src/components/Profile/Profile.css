@@ -8,7 +8,6 @@
   padding: 70px 0;
 }
 
-
 @media screen and (max-width: 450px) {
   .profile {
     max-width: 320px;
@@ -138,10 +137,14 @@
 
 .profile__edit-button {
   cursor: pointer;
-  color: #FFFFFF;
+  color: hsla(120, 100%, 25%, 1);
 }
 
 .profile__logout-button {
   cursor: pointer;
+  color: #EE3465;
+}
+
+.button-disable {
   color: #EE3465;
 }

@@ -93,7 +93,7 @@ export default function Profile({
             {errors.profileEmail && <span className="profile__error-field">{errors.profileEmail}</span>}
             {isSuccessSubmit && <span className="profile__success-field">Ваши данные успешно изменены</span>}
             {updProfileNetworkError && <span className="profile__error-field">{updProfileNetworkError}</span>}
-            <button type="submit" className="profile__edit-button" disabled={!isValid || !isUpdate}>
+            <button type="submit" className={` ${!isValid || !isUpdate ? 'button-disable' : 'profile__edit-button'}`} disabled={!isValid || !isUpdate}>
               Редактировать
             </button>
             <button type="button" className="profile__logout-button" onClick={handleExitAccount}>

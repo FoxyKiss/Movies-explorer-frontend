@@ -17,7 +17,10 @@ export default function MoviesCardList({
   savedMovies,
 }) {
   const filmDuration = (movie) => `${Math.floor(movie.duration / 60)}ч ${movie.duration % 60}м`
+
+
   const renderArray = isSaved ? movies : movies.slice(0, renderCounter)
+
   const handleAddingBtn = () => {
     if (dataLength - renderCounter <= cardCount) {
       setRenderCounter(renderCounter + (dataLength - renderCounter))
@@ -27,7 +30,6 @@ export default function MoviesCardList({
       setRenderCounter(renderCounter + cardCount)
     }
   }
-
   return (
     <section className="movies-card-list">
       {!isSaved ? (
@@ -61,7 +63,6 @@ export default function MoviesCardList({
             ))}
         </ul>
       )}
-
       {!isSaved && isBtnVisible && (
         <button onClick={handleAddingBtn} type="button" className="movies-card-list__button">
           Ещё
