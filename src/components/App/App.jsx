@@ -30,7 +30,7 @@ function App() {
   const [registerNetworkError, setRegisterNetworkError] = React.useState('')
   const [loginNetworkError, setLoginNetworkError] = React.useState('')
   const [updProfileNetworkError, setUpdProfileNetworkError] = React.useState('')
-  const [savedMovies, setSavedMovies] = React.useState('')
+  const [savedMovies, setSavedMovies] = React.useState([])
   const [isAuth, setIsAuth] = React.useState(false)
   const [isSuccessSubmit, setIsSuccessSubmit] = React.useState(false)
   const handleResize = () => {
