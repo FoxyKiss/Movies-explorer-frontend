@@ -27,7 +27,6 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
   const [isInputDisabled, setIsInputDisabled] = React.useState(false)
   const [isBtnVisible, setIsBtnVisible] = React.useState(false)
   const [isPreviousSearch, setIsPreviousSearch] = React.useState(true)
-  const [noSearch, setNoSearch] = React.useState(false)
 
   React.useEffect(() => {
     const lastSearchMovies = JSON.parse(localStorage.getItem('moviesLongFilms'))
@@ -73,7 +72,6 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
         setIsNetworkError(false)
         setIsInputDisabled(true)
         setIsPreloaderVisible(true)
-        setNoSearch(false)
         getMovies()
           .then((movies) => {
             setRenderCounter(cardCount)
@@ -208,14 +206,6 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
       setIsShort(false);
     }
   }, [currentUser]);
-
-  React.useEffect(() => {
-    if (location.pathname === '/saved-movies') {
-      setNoSearch(true)
-    } else {
-      setNoSearch(false)
-    }
-  }, [1]);
   return (
     <>
       <section className="search">
@@ -277,20 +267,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
           savedMovies={savedMovies}
         />
       )}
-      {noSearch ? (<MoviesCardList
-        isSaved={isSaved}
-        movies={moviesStorage}
-        dataLength={dataLength}
-        renderCounter={renderCounter}
-        setRenderCounter={setRenderCounter}
-        cardCount={cardCount}
-        isBtnVisible={isBtnVisible}
-        setIsBtnVisible={setIsBtnVisible}
-        handleDeleteFilm={handleDeleteFilm}
-        handleSaveFilm={handleSaveFilm}
-        savedMovies={savedMovies}
-        noSearch={noSearch}
-      />) : ''}
+
       {isPreloaderVisible && <Preloader />}
       {isNothingFound && <p className="search__form-error">Ничего не найдено</p>}
       {isNetworkError && (

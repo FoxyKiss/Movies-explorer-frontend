@@ -15,7 +15,6 @@ export default function MoviesCardList({
   handleDeleteFilm,
   handleSaveFilm,
   savedMovies,
-  noSearch
 }) {
   const filmDuration = (movie) => `${Math.floor(movie.duration / 60)}ч ${movie.duration % 60}м`
 
@@ -64,19 +63,6 @@ export default function MoviesCardList({
             ))}
         </ul>
       )}
-      {noSearch ? (<ul className="movies-card-list__list">
-        {savedMovies &&
-          savedMovies.map((movie) => (
-            <li key={movie._id}>
-              <MovieCard
-                movie={movie}
-                handleDeleteFilm={handleDeleteFilm}
-                isSaved={isSaved}
-                filmDuration={filmDuration(movie)}
-              />
-            </li>
-          ))}
-      </ul>) : ''}
       {!isSaved && isBtnVisible && (
         <button onClick={handleAddingBtn} type="button" className="movies-card-list__button">
           Ещё
