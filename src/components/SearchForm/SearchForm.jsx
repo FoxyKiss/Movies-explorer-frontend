@@ -27,6 +27,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
   const [isInputDisabled, setIsInputDisabled] = React.useState(false)
   const [isBtnVisible, setIsBtnVisible] = React.useState(false)
   const [isPreviousSearch, setIsPreviousSearch] = React.useState(true)
+  const [savedArr, setSavedArr] = React.useState(true)
 
   React.useEffect(() => {
     const lastSearchMovies = JSON.parse(localStorage.getItem('moviesLongFilms'))
@@ -63,6 +64,7 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
   const onSubmitForm = (evt) => {
     localStorage.setItem(`${currentUser.email} - movieSearch`, values.search);
     localStorage.setItem(`${currentUser.email} - shortMovies`, isShort);
+    setSavedArr(false)
     evt.preventDefault()
     if (isValid) {
       setIsPreviousSearch(false)
@@ -265,6 +267,23 @@ export default function SearchForm({ isSaved, cardCount, handleSaveFilm, handleD
           handleDeleteFilm={handleDeleteFilm}
           handleSaveFilm={handleSaveFilm}
           savedMovies={savedMovies}
+
+        />
+      )}
+      {savedArr && !isFinding && isSaved && (
+        <MoviesCardList
+          isSaved={isSaved}
+          movies={moviesStorage}
+          dataLength={dataLength}
+          renderCounter={renderCounter}
+          setRenderCounter={setRenderCounter}
+          cardCount={cardCount}
+          isBtnVisible={isBtnVisible}
+          setIsBtnVisible={setIsBtnVisible}
+          handleDeleteFilm={handleDeleteFilm}
+          handleSaveFilm={handleSaveFilm}
+          savedMovies={savedMovies}
+          savedArr={savedArr}
         />
       )}
 

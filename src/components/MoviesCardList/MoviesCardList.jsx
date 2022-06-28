@@ -15,6 +15,7 @@ export default function MoviesCardList({
   handleDeleteFilm,
   handleSaveFilm,
   savedMovies,
+  savedArr,
 }) {
   const filmDuration = (movie) => `${Math.floor(movie.duration / 60)}ч ${movie.duration % 60}м`
 
@@ -52,6 +53,22 @@ export default function MoviesCardList({
         <ul className="movies-card-list__list">
           {renderArray &&
             renderArray.map((movie) => (
+              <li key={movie._id}>
+                <MovieCard
+                  movie={movie}
+                  handleDeleteFilm={handleDeleteFilm}
+                  isSaved={isSaved}
+                  filmDuration={filmDuration(movie)}
+                />
+              </li>
+            ))}
+        </ul>
+      )}
+
+      {savedArr && (
+        <ul className="movies-card-list__list">
+          {savedMovies &&
+            savedMovies.map((movie) => (
               <li key={movie._id}>
                 <MovieCard
                   movie={movie}
