@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import './Navigation.css'
 
 
-export default function Navigation({ isLogin }) {
+export default function Navigation() {
   return (
     <>
-      <nav className={`navigation ${isLogin ? '' : 'hide-block'}`}>
+      <nav className='navigation'>
         <Link to='movies' className="navigation__link">Фильмы</Link>
         <Link to='saved-movies' className="navigation__link">Сохранённые фильмы</Link>
       </nav>
